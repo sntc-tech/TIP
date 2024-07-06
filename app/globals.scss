@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-zinc-100 text-zinc-900 font-normal text-base w-screen relative
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
