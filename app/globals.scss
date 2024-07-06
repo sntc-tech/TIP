@@ -3,7 +3,23 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-100 text-zinc-900 font-normal text-base w-screen relative
+  @apply bg-zinc-100 text-zinc-900 font-normal text-base w-screen relative overflow-x-hidden
+}
+
+::-webkit-scrollbar {
+  @apply w-2.5
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-zinc-100
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-amber-500
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-amber-600
 }
 
 @layer utilities {

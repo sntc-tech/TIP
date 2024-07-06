@@ -1,7 +1,13 @@
+import HomeHeader from "@/components/home/home-header";
+import Testimonials from "@/components/home/testimonials";
+import EventCarousel from "@/components/home/event-carousel";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      hi
+    <main className="flex flex-col items-start justify-between">
+      <HomeHeader />
+      <Testimonials />
+      <EventCarousel />
     </main>
   );
 }
