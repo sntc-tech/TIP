@@ -6,7 +6,9 @@ const EventsHeader = () => {
       <div className="text-4xl md:text-6xl font-semibold tracking-tight text-center md:text-left">
         View Events
       </div>
-      <div className="text-xl md:text-2xl mb-5">See what's in it for you</div>
+      <div className="text-xl md:text-2xl mb-5">
+        See what&apos;s in it for you
+      </div>
     </div>
   );
 };
