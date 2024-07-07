@@ -13,6 +13,7 @@ const button = cva(
     "flex",
     "justify-center",
     "items-center",
+    "gap-2.5",
     "uppercase",
     "pointer",
     "transition",

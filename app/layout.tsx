@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import "./globals.scss";
 import Navbar from "@/components/nav/navbar";
+import Footer from "@/components/footer/footer";
 
 const jost = Jost({ subsets: ["latin"] });
 
@@ -22,6 +23,9 @@ export default function RootLayout({
           <Navbar />
         </div>
         {children}
+        <div className="w-full">
+          <Footer />
+        </div>
       </body>
     </html>
   );

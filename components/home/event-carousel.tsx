@@ -58,7 +58,8 @@ const EventCarousel = () => {
           className={
             "flex md:hidden w-full bg-[url(" +
             eventCardData[index].img +
-            ")] bg-center bg-cover flex-col justify-end items-start uppercase text-zinc-100 p-5"
+            ")] bg-center bg-cover flex-col justify-end items-start uppercase text-zinc-100 p-5 " +
+            styles.carouselItem
           }
         >
           <div className="w-full text-4xl font-semibold tracking-tight leading-normal truncate">
