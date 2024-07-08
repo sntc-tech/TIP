@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-100 text-zinc-900 font-normal text-base w-screen relative overflow-x-hidden
+  @apply bg-zinc-100 text-zinc-900 font-normal text-base w-screen relative overflow-x-hidden scroll-smooth
 }
 
 ::-webkit-scrollbar {

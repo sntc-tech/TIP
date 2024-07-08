@@ -1,41 +1,41 @@
 export const eventCardData = [
   {
-    name: "basics of c++",
+    name: "Basics of C++",
     img: "/images/header.png",
     link: "/events#1",
   },
   {
-    name: "the linux ecosystem",
+    name: "The Linux Ecosystem",
     img: "/images/header.png",
     link: "/events#2",
   },
   {
-    name: "3d modeling and printing",
+    name: "3D Modeling and Printing",
     img: "/images/header.png",
     link: "/events#3",
   },
   {
-    name: "cybersecurity",
+    name: "Cybersecurity",
     img: "/images/header.png",
     link: "/events#4",
   },
   {
-    name: "github and version control",
+    name: "GitHub and Version Control",
     img: "/images/header.png",
     link: "/events#5",
   },
   {
-    name: "profile management and content organisation",
+    name: "Profile Management and Content Organisation",
     img: "/images/header.png",
     link: "/events#6",
   },
   {
-    name: "trading and startups",
+    name: "Trading and Startups",
     img: "/images/header.png",
     link: "/events#6",
   },
   {
-    name: "arduino and sensors",
+    name: "Arduino and Sensors",
     img: "/images/header.png",
     link: "/events#6",
   },
