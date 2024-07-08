@@ -28,6 +28,7 @@ const JumpBar = () => {
               onClick={() => {
                 setToggle(false);
               }}
+              key={e.id}
             >
               {e.name}
             </Link>
