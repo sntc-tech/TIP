@@ -1,22 +1,18 @@
 export const testimonials = [
   {
-    text: "Test 1",
+    text: "Develop effective research and problem-solving techniques",
     author: "Author 1",
   },
   {
-    text: "Test 2",
+    text: "Gain insights into the intersection of engineering with trade and finance",
     author: "Author 2",
   },
   {
-    text: "Test 3",
+    text: "Foster a well-rounded understanding of the field, equipping them with both technical and practical skills for real-world applications",
     author: "Author 3",
   },
   {
-    text: "Test 4",
+    text: "Benefit from the valuable experiences and insights shared by senior peers, ensuring a fruitful learning of real-life skills",
     author: "Author 4",
-  },
-  {
-    text: "Test 5",
-    author: "Author 5",
   },
 ];

@@ -12,7 +12,7 @@ const Footer = () => {
           Presented by SnTC, IIT Mandi
         </div>
         <div className="text-zinc-500 text-center md:text-left">
-          Lorem ipsum. This is a short description of the club and what it does.
+          Empowering tech-advancement through innovation and discovery
         </div>
         <div className="mt-12 text-zinc-500 text-sm block md:hidden">
           Copyright © 2024, SnTC, IIT Mandi.
@@ -23,10 +23,11 @@ const Footer = () => {
           About TIP
         </div>
         <div className="text-zinc-500 max-w-screen-lg mb-12">
-          TIP is a program in IIT Mandi that honestly I have no idea what it
-          does lol this is just filler text to emphasise on the design more than
-          anything else so feel free to ignore this long text and thank you for
-          your patience
+          The Technical Induction Programme is aimed at introducing the
+          participants with key technical skills and tools, providing them with
+          guidance and support by laying a solid foundation in top tech
+          competencies to ensure a seamless transition from school to a
+          professional tech-environment.
         </div>
         <div className="flex gap-2.5">
           <Mail />

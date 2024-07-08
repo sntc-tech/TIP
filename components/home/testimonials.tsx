@@ -6,7 +6,7 @@ import { testimonials } from "@/lib/testimonials";
 
 const Testimonials = () => {
   const [testimonial, setTestimonial] = useState({
-    text: "Initial Test",
+    text: "An exciting series of specially curated sessions to boost your confidence in core technologies",
     author: "Initial Author",
   });
 
@@ -14,18 +14,15 @@ const Testimonials = () => {
     let i = 0;
     const timer = setInterval(() => {
       setTestimonial(testimonials[i]);
-      i = i >= 4 ? 0 : (i % 5) + 1;
+      i = i >= testimonials.length - 1 ? 0 : (i % testimonials.length) + 1;
     }, 5000);
     return () => clearInterval(timer);
   }, []);
 
   return (
     <div className="w-full px-12 p-24 bg-zinc-900 text-zinc-100">
-      <div className="text-4xl md:text-6xl font-semibold tracking-tight md:leading-normal max-w-screen-2xl">
-        {testimonial.text}
-      </div>
-      <div className="text-xl md:text-2xl text-zinc-500 font-medium mb-12">
-        — {testimonial.author}
+      <div className="text-4xl md:text-6xl font-semibold tracking-tight md:leading-normal max-w-screen-2xl pb-5">
+        &apos;{testimonial.text}&apos;
       </div>
       <div className="w-full h-0.5 bg-zinc-800">
         <div className={styles.progressBar} key={testimonial.author} />

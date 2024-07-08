@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { Minus, Plus } from "lucide-react";
-import { eventCardData } from "@/lib/event-card-data";
+import { eventData } from "@/lib/event-data";
+import Link from "next/link";
 
 const JumpBar = () => {
   const [toggle, setToggle] = useState(false);
@@ -21,8 +22,15 @@ const JumpBar = () => {
       </div>
       {toggle && (
         <div className="w-screen bg-zinc-100 border-b-2 border-zinc-900/[0.1] px-5 md:px-12 pb-5 grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-xl">
-          {eventCardData.map((e, i) => (
-            <div key={i}>{e.name}</div>
+          {eventData.map((e) => (
+            <Link
+              href={`#event-${e.id}`}
+              onClick={() => {
+                setToggle(false);
+              }}
+            >
+              {e.name}
+            </Link>
           ))}
         </div>
       )}
