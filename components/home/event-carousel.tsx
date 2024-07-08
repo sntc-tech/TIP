@@ -57,7 +57,7 @@ const EventCarousel = () => {
         <div
           className={
             "flex md:hidden w-full bg-[url(" +
-            eventData[index].img +
+            eventData[index].imgPath +
             ")] bg-center bg-cover flex-col justify-end items-start uppercase text-zinc-100 p-5 " +
             styles.carouselItem
           }
