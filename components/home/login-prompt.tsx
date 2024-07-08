@@ -10,7 +10,7 @@ const LoginPrompt = () => {
         Login to register for events
       </div>
       <div className="text-center md:text-left text-xl md:text-2xl text-zinc-500 font-medium mb-12 max-w-screen-sm">
-        Registering on the website is mandatory to attend any event under the
+        Registration on the website is mandatory to attend any event under the
         Technical Induction Program.
       </div>
       <div className="flex flex-wrap items-center justify-center gap-2.5">
