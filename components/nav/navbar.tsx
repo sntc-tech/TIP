@@ -31,8 +31,12 @@ const Navbar = () => {
       <div
         className={`${toggle ? "flex" : "hidden"} bg-zinc-100 w-full p-5 sm:hidden flex-col gap-5 text-base leading-normal font-medium uppercase`}
       >
-        <Link href={"/events"}>Events</Link>
-        <Link href={"/contact"}>contact</Link>
+        <Link href={"/events"} onClick={() => setToggle(false)}>
+          Events
+        </Link>
+        <Link href={"/contact"} onClick={() => setToggle(false)}>
+          contact
+        </Link>
         <div>login</div>
       </div>
     </>

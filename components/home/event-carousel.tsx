@@ -62,7 +62,7 @@ const EventCarousel = () => {
             styles.carouselItem
           }
         >
-          <div className="w-full text-4xl font-semibold tracking-tight leading-normal truncate">
+          <div className="w-full text-2xl font-semibold tracking-tight leading-normal truncate">
             {eventData[index].name}
           </div>
           <Button variant="transparent">details</Button>

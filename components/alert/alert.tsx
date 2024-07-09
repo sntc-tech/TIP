@@ -17,8 +17,9 @@ const alert = cva(
     "justify-between",
     "text-zinc-900",
     "rounded-md",
-    "min-w-[800px]",
-    "max-w-[1000px]",
+    "w-full",
+    "lg:min-w-[800px]",
+    "lg:max-w-[1000px]",
   ],
   {
     variants: {
@@ -39,7 +40,7 @@ const Alert = (props: Props) => {
 
   return (
     <div className={display ? alert({ variant: props.variant }) : "hidden"}>
-      <div className="flex flex-col">
+      <div className="flex flex-col w-[calc(100%-24px)]">
         <div className="font-semibold text-lg">
           {props.variant === "warning"
             ? "Heads up!"
