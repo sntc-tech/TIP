@@ -13,10 +13,9 @@ const Navbar = () => {
   return (
     <>
       <div className="w-full bg-zinc-100 h-full px-5 sm:px-12 py-2.5 flex flex-row justify-between items-center border-b-2">
-        <Link href={"/"}>
-          <Image src={sntcLogo} alt="SnTC logo" width={60} height={60} />
-        </Link>
+        <Image src={sntcLogo} alt="SnTC logo" width={60} height={60} />
         <div className="hidden sm:flex gap-5 items-center text-base leading-normal font-medium uppercase">
+          <Link href={"/"}>Home</Link>
           <Link href={"/events"}>Events</Link>
           <Link href={"/contact"}>contact</Link>
           <Link href={"/profile"}>
@@ -33,6 +32,9 @@ const Navbar = () => {
       <div
         className={`${toggle ? "flex" : "hidden"} bg-zinc-100 w-full p-5 sm:hidden flex-col gap-5 text-base leading-normal font-medium uppercase`}
       >
+        <Link href={"/"} onClick={() => setToggle(false)}>
+          Home
+        </Link>
         <Link href={"/events"} onClick={() => setToggle(false)}>
           Events
         </Link>
@@ -40,7 +42,7 @@ const Navbar = () => {
           contact
         </Link>
         <Link href={"/profile"} onClick={() => setToggle(false)}>
-          contact
+          login
         </Link>
       </div>
     </>
