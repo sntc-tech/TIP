@@ -38,7 +38,9 @@ const ProfileCard = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
           {eventData.map((event) => (
-            <div className="text-lg">{event.name}</div>
+            <div className="text-lg" key={event.id}>
+              {event.name}
+            </div>
           ))}
         </div>
       </div>
