@@ -22,7 +22,7 @@ interface Props {
 const EventSection = ({ props }: Props) => {
   return (
     <div
-      className="flex flex-col lg:flex-row lg:py-12 font-medium items-center lg:items-stretch"
+      className="border-t-[200px] mt-[-200px] border-t-transparent bg-clip-padding flex flex-col lg:flex-row lg:py-12 font-medium items-center lg:items-stretch"
       id={`event-${props.id}`}
     >
       <Image
