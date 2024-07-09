@@ -19,7 +19,9 @@ const Navbar = () => {
         <div className="hidden sm:flex gap-5 items-center text-base leading-normal font-medium uppercase">
           <Link href={"/events"}>Events</Link>
           <Link href={"/contact"}>contact</Link>
-          <Button>Login</Button>
+          <Link href={"/profile"}>
+            <Button>Login</Button>
+          </Link>
         </div>
         <div
           className="inline sm:hidden pointer"
@@ -37,7 +39,9 @@ const Navbar = () => {
         <Link href={"/contact"} onClick={() => setToggle(false)}>
           contact
         </Link>
-        <div>login</div>
+        <Link href={"/profile"} onClick={() => setToggle(false)}>
+          contact
+        </Link>
       </div>
     </>
   );

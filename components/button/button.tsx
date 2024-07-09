@@ -38,7 +38,7 @@ const button = cva(
           "shadow-zinc-900/[0.2]",
         ],
         outline: [
-          "bg-zinc-100",
+          "bg-transparent",
           "text-zinc-900",
           "border",
           "text-lg",

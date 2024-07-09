@@ -10,7 +10,7 @@ const ContactPage = () => {
       <div className="flex flex-col items-center px-5 py-12 pb-24 md:px-12">
         <Alert
           text={
-            "You are advised to text/email the contacts, not call them, so that they reply at their own convenience."
+            "We prefer mails/texts over calls, so we can reply at our own convenience."
           }
           variant="warning"
         />
