@@ -58,7 +58,7 @@ const EventSection = ({ props }: Props) => {
           </div>
           <div className="flex flex-row gap-2.5 mt-2.5 items-center text-zinc-400">
             <Mail size={24} />
-            {props.contact || "fakemail@gmail.com"}
+            {props.contact || "90909 09090"}
           </div>
         </div>
         <div className="mt-5 lg:mt-0 lg:absolute lg:bottom-0 lg:left-5">
