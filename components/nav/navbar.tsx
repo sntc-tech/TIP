@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Image from "next/image";
 import sntcLogo from "@/public/sntc.png";
 import Button from "@/components/button/button";
@@ -8,13 +8,18 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { createUserDoc, signInWithGooglePopup } from "@/firebase/firebase";
+import { UserContext } from "@/context/user-context";
 
 const Navbar = () => {
   const router = useRouter();
   const [toggle, setToggle] = useState(false);
+  const { currentUser, setCurrentUser } = useContext(UserContext);
+
   const loginUser = async () => {
     const { user } = await signInWithGooglePopup();
-    await createUserDoc(user);
+    console.log(user);
+    setCurrentUser(user);
+    const userRef = await createUserDoc(user);
     router.push("/profile", {});
   };
 
@@ -26,7 +31,13 @@ const Navbar = () => {
           <Link href={"/"}>Home</Link>
           <Link href={"/events"}>Events</Link>
           <Link href={"/contact"}>contact</Link>
-          <Button onClick={loginUser}>Login</Button>
+          {currentUser ? (
+            <Link href={"/profile"}>
+              <Button>Profile</Button>
+            </Link>
+          ) : (
+            <Button onClick={loginUser}>Login</Button>
+          )}
         </div>
         <div
           className="inline sm:hidden pointer"

@@ -1,16 +1,31 @@
-import React from "react";
+"use client";
+
+import React, { useContext, useEffect } from "react";
 import Image from "next/image";
-import HeaderPic from "@/public/images/header.png";
 import Link from "next/link";
 import { eventData } from "@/lib/event-data";
+import { UserContext } from "@/context/user-context";
+import { useRouter } from "next/navigation";
+import UserPic from "@/public/user.png";
 
 const ProfileCard = () => {
+  const { currentUser } = useContext(UserContext);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!currentUser) {
+      router.push("/");
+    }
+  }, [currentUser]);
+
+  console.log(currentUser);
+
   return (
     <div className="grid grid-cols-12">
       <div className="p-12 col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 border-2 border-zinc-200 bg-zinc-200/[0.2] rounded-md mt-12">
         <div className="flex flex-col sm:flex-row items-center gap-5 pb-12">
           <Image
-            src={HeaderPic}
+            src={currentUser?.photoURL || UserPic}
             width={200}
             height={200}
             className="w-40 h-40 shadow-xl shadow-zinc-900/[0.3] rounded-full"
@@ -18,18 +33,18 @@ const ProfileCard = () => {
           />
           <div>
             <div className="text-4xl md:text-5xl font-semibold tracking-tight">
-              Username
+              {currentUser?.displayName || "Username"}
             </div>
             <div className="text-lg font-medium text-sky-500 underline">
               Sign out
             </div>
           </div>
         </div>
-        <div className="flex flex-row gap-2.5 items-center mb-12">
+        <div className="flex flex-col sm:flex-row gap-2.5 items-center mb-12">
           <div className="text-xl font-medium">Email</div>
           <Link href="">
             <div className="text-xl text-sky-500 underline">
-              testmail@gmail.com
+              {currentUser?.email || "testmail@gmail.com"}
             </div>
           </Link>
         </div>
