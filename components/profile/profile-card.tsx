@@ -31,7 +31,7 @@ const ProfileCard = () => {
 
   return (
     <div className="grid grid-cols-12 mb-12">
-      <div className="p-12 col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 border-2 border-zinc-200 bg-zinc-200/[0.2] rounded-md mt-12">
+      <div className="p-5 sm:p-12 col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 border-2 border-zinc-200 bg-zinc-200/[0.2] rounded-md mt-12">
         <div className="flex flex-col sm:flex-row items-center gap-5 pb-12">
           <Image
             src={userData?.photoURL || UserPic}
