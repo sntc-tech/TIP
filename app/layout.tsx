@@ -4,6 +4,7 @@ import "./globals.scss";
 import Navbar from "@/components/nav/navbar";
 import Footer from "@/components/footer/footer";
 import UserProvider from "@/context/user-context";
+import { Toaster } from "react-hot-toast";
 
 const jost = Jost({ subsets: ["latin"] });
 
@@ -21,6 +22,16 @@ export default function RootLayout({
     <html lang="en">
       <UserProvider>
         <body className={jost.className}>
+          <Toaster
+            position="top-center"
+            toastOptions={{
+              className: "",
+              style: {
+                fontSize: "20px",
+                padding: "10px 20px",
+              },
+            }}
+          />
           <div className="w-full h-20 fixed top-0 z-50">
             <Navbar />
           </div>

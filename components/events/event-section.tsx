@@ -23,8 +23,9 @@ interface Props {
 
 const EventSection = ({ props, regEvents, setRegEvents }: Props) => {
   const registerUser = () => {
-    if (!regEvents.includes(props.name))
+    if (!regEvents.includes(props.name)) {
       setRegEvents([...regEvents, props.name]);
+    }
   };
 
   const isUserRegistered = () => {

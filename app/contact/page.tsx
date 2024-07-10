@@ -8,12 +8,10 @@ const ContactPage = () => {
     <div>
       <ContactHeader />
       <div className="flex flex-col items-center px-5 py-12 pb-24 md:px-12">
-        <Alert
-          text={
-            "We prefer mails/texts over calls, so we can reply at our own convenience."
-          }
-          variant="warning"
-        />
+        <Alert variant="warning">
+          We prefer mails/texts over calls, so we can reply at our own
+          convenience.
+        </Alert>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 px-12 pb-24">
         <div className="sm:col-span-2 text-4xl md:text-6xl font-semibold tracking-tight text-center md:text-left">

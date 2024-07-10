@@ -45,12 +45,10 @@ const EventsPage = () => {
       </div>
       <div></div>
       <div className="flex flex-col items-center gap-5 px-5 py-12 md:px-12">
-        <Alert
-          text={
-            "Since the venue can only accommodate a maximum of 300 students, only the first 300 students to register will be considered."
-          }
-          variant="warning"
-        />
+        <Alert variant="warning">
+          Since the venue can only accommodate a maximum of 300 students, only
+          the first 300 students to register will be considered.
+        </Alert>
         {eventData.map((event) => (
           <EventSection
             props={event}

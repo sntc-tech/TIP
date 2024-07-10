@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { cva } from "class-variance-authority";
 import { X } from "lucide-react";
 
 interface Props {
-  text: string;
+  children: ReactNode;
   variant?: "warning" | "error" | "success";
 }
 
@@ -36,7 +36,7 @@ const alert = cva(
   },
 );
 
-const Alert = ({ text, variant }: Props) => {
+const Alert = ({ children, variant }: Props) => {
   const [display, setDisplay] = useState(true);
 
   return (
@@ -49,7 +49,7 @@ const Alert = ({ text, variant }: Props) => {
               ? "We messed up!"
               : "Yay!"}
         </div>
-        <div className="font-medium">{text}</div>
+        <div className="font-medium">{children}</div>
       </div>
       <X
         className={
