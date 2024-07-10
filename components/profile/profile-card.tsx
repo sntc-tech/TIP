@@ -3,7 +3,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { eventData } from "@/lib/event-data";
 import { UserContext } from "@/context/user-context";
 import { useRouter } from "next/navigation";
 import UserPic from "@/public/user.png";
@@ -62,13 +61,12 @@ const ProfileCard = () => {
           Registered events
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-          {eventData.map((event) => (
-            <div className="text-lg" key={event.id}>
-              {event.name}
+          {userData?.registeredEvents?.map((event: string) => (
+            <div className="text-lg" key={event}>
+              {event}
             </div>
           ))}
         </div>
-        {userData?.registeredEvents}
       </div>
     </div>
   );
