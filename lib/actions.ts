@@ -32,6 +32,7 @@ export const getUserDoc = async (userID: string) => {
 
   if (!userSnapshot.exists()) {
     toast.error("User not found!");
+    throw new Error("User not found");
   }
   return userSnapshot.data();
 };
