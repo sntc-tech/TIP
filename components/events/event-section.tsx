@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import { Calendar, Clock, Mail, Pin } from "lucide-react";
 import Button from "@/components/button/button";
 import HeaderPic from "@/public/images/header.png";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { UserContext } from "@/context/user-context";
+import toast from "react-hot-toast";
 
 interface Props {
   props: {
@@ -22,9 +24,18 @@ interface Props {
 }
 
 const EventSection = ({ props, regEvents, setRegEvents }: Props) => {
+  const { currentUserID } = useContext(UserContext);
+
   const registerUser = () => {
-    if (!regEvents.includes(props.name)) {
-      setRegEvents([...regEvents, props.name]);
+    if (currentUserID) {
+      if (!regEvents.includes(props.name)) {
+        setRegEvents([...regEvents, props.name]);
+        toast.success("Registration successful!");
+      } else {
+        toast("You've already registered!");
+      }
+    } else {
+      toast.error("You need to log in first!");
     }
   };
 

@@ -1,6 +1,7 @@
 import { User } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "@/firebase/firebase";
+import toast from "react-hot-toast";
 
 export const createUserDoc = async (userDoc: User) => {
   const userDocRef = doc(db, "users", userDoc.uid);
@@ -18,6 +19,7 @@ export const createUserDoc = async (userDoc: User) => {
         registeredEvents,
       });
     } catch (e) {
+      toast.error("Unexpected error. More info in console");
       console.log(e);
     }
   }
@@ -29,7 +31,7 @@ export const getUserDoc = async (userID: string) => {
   const userSnapshot = await getDoc(userDocRef);
 
   if (!userSnapshot.exists()) {
-    throw new Error("User not found!");
+    toast.error("User not found!");
   }
   return userSnapshot.data();
 };

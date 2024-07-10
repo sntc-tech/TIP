@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { signInWithGooglePopup } from "@/firebase/firebase";
 import { UserContext } from "@/context/user-context";
 import { createUserDoc } from "@/lib/actions";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -17,10 +18,17 @@ const Navbar = () => {
   const router = useRouter();
 
   const loginUser = async () => {
-    const { user } = await signInWithGooglePopup();
-    setCurrentUserID(user.uid);
-    await createUserDoc(user);
-    router.push("/profile");
+    try {
+      const { user } = await signInWithGooglePopup();
+      setCurrentUserID(user.uid);
+      await createUserDoc(user);
+      toast.success("Signed in successfully!");
+      router.push("/profile");
+    } catch (e) {
+      toast.error("Error signing in. More info in console");
+      router.push("/");
+      console.log(e);
+    }
   };
 
   return (
