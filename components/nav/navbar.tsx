@@ -6,9 +6,17 @@ import sntcLogo from "@/public/sntc.png";
 import Button from "@/components/button/button";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { createUserDoc, signInWithGooglePopup } from "@/firebase/firebase";
 
 const Navbar = () => {
+  const router = useRouter();
   const [toggle, setToggle] = useState(false);
+  const loginUser = async () => {
+    const { user } = await signInWithGooglePopup();
+    await createUserDoc(user);
+    router.push("/profile", {});
+  };
 
   return (
     <>
@@ -18,9 +26,7 @@ const Navbar = () => {
           <Link href={"/"}>Home</Link>
           <Link href={"/events"}>Events</Link>
           <Link href={"/contact"}>contact</Link>
-          <Link href={"/profile"}>
-            <Button>Login</Button>
-          </Link>
+          <Button onClick={loginUser}>Login</Button>
         </div>
         <div
           className="inline sm:hidden pointer"
