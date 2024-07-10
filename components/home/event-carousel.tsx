@@ -68,7 +68,9 @@ const EventCarousel = () => {
           <div className="w-full text-2xl font-semibold tracking-tight leading-normal truncate">
             {eventData[index].name}
           </div>
-          <Button variant="transparent">details</Button>
+          <Link href={`/events#event-${eventData[index].id}`}>
+            <Button variant="transparent">details</Button>
+          </Link>
         </div>
         <div
           className="flex absolute right-0 top-0 h-full px-2 py-12 flex-col justify-center items-center text-zinc-100"
