@@ -1,11 +1,40 @@
-import React from "react";
+"use client";
+
+import React, { useContext, useEffect, useState } from "react";
 import EventsHeader from "@/components/events/events-header";
 import JumpBar from "@/components/events/jump-bar";
 import EventSection from "@/components/events/event-section";
 import { eventData } from "@/lib/event-data";
 import Alert from "@/components/alert/alert";
+import { UserContext } from "@/context/user-context";
+import { getUserDoc } from "@/lib/actions";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "@/firebase/firebase";
 
 const EventsPage = () => {
+  const [regEvents, setRegEvents] = useState<string[]>([]);
+  const { currentUserID } = useContext(UserContext);
+
+  useEffect(() => {
+    (async () => {
+      if (currentUserID) {
+        const { registeredEvents } = await getUserDoc(currentUserID);
+        setRegEvents(registeredEvents);
+      }
+    })();
+  }, []);
+
+  useEffect(() => {
+    (async () => {
+      if (currentUserID && regEvents.length) {
+        const userDoc = doc(db, "users", currentUserID);
+        await updateDoc(userDoc, {
+          registeredEvents: regEvents,
+        });
+      }
+    })();
+  }, [regEvents]);
+
   return (
     <div className="relative">
       <EventsHeader />
@@ -20,7 +49,12 @@ const EventsPage = () => {
           variant="warning"
         />
         {eventData.map((event) => (
-          <EventSection props={event} key={event.id} />
+          <EventSection
+            props={event}
+            key={event.id}
+            regEvents={regEvents}
+            setRegEvents={setRegEvents}
+          />
         ))}
       </div>
     </div>

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import { Calendar, Clock, Mail, Pin } from "lucide-react";
@@ -19,9 +17,20 @@ interface Props {
     by: string;
     contact: string;
   };
+  regEvents: string[];
+  setRegEvents: (event: string[]) => void;
 }
 
-const EventSection = ({ props }: Props) => {
+const EventSection = ({ props, regEvents, setRegEvents }: Props) => {
+  const registerUser = () => {
+    if (!regEvents.includes(props.name))
+      setRegEvents([...regEvents, props.name]);
+  };
+
+  const isUserRegistered = () => {
+    return regEvents.includes(props.name);
+  };
+
   return (
     <div
       className="border-t-[200px] mt-[-200px] border-t-transparent bg-clip-padding flex flex-col lg:flex-row lg:py-12 font-medium items-center lg:items-stretch"
@@ -64,7 +73,13 @@ const EventSection = ({ props }: Props) => {
           </div>
         </div>
         <div className="mt-5 lg:mt-0 lg:absolute lg:bottom-0 lg:left-5">
-          <Button>Register</Button>
+          <Button
+            onClick={registerUser}
+            variant={isUserRegistered() ? "disabled" : "gradient"}
+          >
+            {" "}
+            {isUserRegistered() ? "Registered" : "Register"}
+          </Button>
         </div>
       </div>
     </div>
