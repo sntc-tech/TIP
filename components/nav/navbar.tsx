@@ -58,9 +58,21 @@ const Navbar = () => {
         <Link href={"/contact"} onClick={() => setToggle(false)}>
           contact
         </Link>
-        <Link href={"/profile"} onClick={() => setToggle(false)}>
-          login
-        </Link>
+        {currentUser ? (
+          <Link href={"/profile"} onClick={() => setToggle(false)}>
+            profile
+          </Link>
+        ) : (
+          <div
+            className="cursor-pointer"
+            onClick={async () => {
+              await loginUser();
+              setToggle(false);
+            }}
+          >
+            Login
+          </div>
+        )}
       </div>
     </>
   );
