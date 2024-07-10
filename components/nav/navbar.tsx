@@ -7,20 +7,20 @@ import Button from "@/components/button/button";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { createUserDoc, signInWithGooglePopup } from "@/firebase/firebase";
+import { signInWithGooglePopup } from "@/firebase/firebase";
 import { UserContext } from "@/context/user-context";
+import { createUserDoc } from "@/lib/actions";
 
 const Navbar = () => {
-  const router = useRouter();
   const [toggle, setToggle] = useState(false);
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { currentUserID, setCurrentUserID } = useContext(UserContext);
+  const router = useRouter();
 
   const loginUser = async () => {
     const { user } = await signInWithGooglePopup();
-    console.log(user);
-    setCurrentUser(user);
-    const userRef = await createUserDoc(user);
-    router.push("/profile", {});
+    setCurrentUserID(user.uid);
+    await createUserDoc(user);
+    router.push("/profile");
   };
 
   return (
@@ -31,7 +31,7 @@ const Navbar = () => {
           <Link href={"/"}>Home</Link>
           <Link href={"/events"}>Events</Link>
           <Link href={"/contact"}>contact</Link>
-          {currentUser ? (
+          {currentUserID ? (
             <Link href={"/profile"}>
               <Button>Profile</Button>
             </Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
         <Link href={"/contact"} onClick={() => setToggle(false)}>
           contact
         </Link>
-        {currentUser ? (
+        {currentUserID ? (
           <Link href={"/profile"} onClick={() => setToggle(false)}>
             profile
           </Link>

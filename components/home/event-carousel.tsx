@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Button from "@/components/button/button";
 import { eventData } from "@/lib/event-data";
 import styles from "./event-carousel.module.scss";
+import Link from "next/link";
 
 const EventCarousel = () => {
   const [index, setIndex] = useState(0);
@@ -50,7 +51,9 @@ const EventCarousel = () => {
                 <div className="w-full text-2xl lg:text-4xl font-semibold tracking-tight md:leading-normal truncate">
                   {data.name}
                 </div>
-                <Button variant="transparent">details</Button>
+                <Link href={`/events#event-${data.id}`}>
+                  <Button variant="transparent">details</Button>
+                </Link>
               </div>
             </div>
           ))}

@@ -1,23 +1,22 @@
 "use client";
 
 import React, { createContext, ReactNode, useState } from "react";
-import { User } from "firebase/auth";
 
 interface Props {
   children: ReactNode;
 }
 
 export const UserContext = createContext<{
-  currentUser: User | null;
-  setCurrentUser: (user: User | null) => void;
+  currentUserID: string | null;
+  setCurrentUserID: (userID: string) => void;
 }>({
-  currentUser: null,
-  setCurrentUser: (user) => null,
+  currentUserID: null,
+  setCurrentUserID: () => null,
 });
 
 const UserProvider = ({ children }: Props) => {
-  const [currentUser, setCurrentUser] = useState<User | null>(null);
-  const value = { currentUser, setCurrentUser };
+  const [currentUserID, setCurrentUserID] = useState<string | null>(null);
+  const value = { currentUserID, setCurrentUserID };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };

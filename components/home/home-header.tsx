@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "@/components/button/button";
+import Link from "next/link";
 
 const HomeHeader = () => {
   return (
@@ -10,7 +11,9 @@ const HomeHeader = () => {
       <div className="text-xl md:text-2xl font-medium mb-5">
         SnTC, IIT Mandi
       </div>
-      <Button variant="transparent">Browse events</Button>
+      <Link href={"/events"}>
+        <Button variant="transparent">Browse events</Button>
+      </Link>
     </div>
   );
 };

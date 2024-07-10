@@ -1,9 +1,26 @@
-import React from "react";
+"use client";
+
+import React, { useContext } from "react";
 import Button from "@/components/button/button";
 import GoogleLogo from "@/public/google.png";
 import Image from "next/image";
+import Link from "next/link";
+import { signInWithGooglePopup } from "@/firebase/firebase";
+import { createUserDoc } from "@/lib/actions";
+import { UserContext } from "@/context/user-context";
+import { useRouter } from "next/navigation";
 
 const LoginPrompt = () => {
+  const { setCurrentUserID } = useContext(UserContext);
+  const router = useRouter();
+
+  const loginUser = async () => {
+    const { user } = await signInWithGooglePopup();
+    setCurrentUserID(user.uid);
+    await createUserDoc(user);
+    router.push("/profile");
+  };
+
   return (
     <div className="px-12 py-24 flex flex-col md:items-start items-center">
       <div className="text-center md:text-left text-4xl md:text-6xl font-semibold tracking-tight md:leading-normal bg-gradient-to-br from-pink-500 to-amber-500 inline-block text-transparent bg-clip-text">
@@ -14,11 +31,13 @@ const LoginPrompt = () => {
         Technical Induction Program.
       </div>
       <div className="flex flex-wrap items-center justify-center gap-2.5">
-        <Button variant="black">
+        <Button variant="black" onClick={loginUser}>
           <Image src={GoogleLogo} alt={"Google logo"} width={24} />
           login with google
         </Button>
-        <Button variant="outline">browse projects</Button>
+        <Link href={"/events"}>
+          <Button variant="outline">browse projects</Button>
+        </Link>
       </div>
     </div>
   );
