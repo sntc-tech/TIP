@@ -15,6 +15,7 @@ const alert = cva(
     "flex",
     "flex-row",
     "justify-between",
+    "z-10",
     "text-zinc-900",
     "rounded-md",
     "w-full",
@@ -35,30 +36,32 @@ const alert = cva(
   },
 );
 
-const Alert = (props: Props) => {
+const Alert = ({ text, variant }: Props) => {
   const [display, setDisplay] = useState(true);
 
   return (
-    <div className={display ? alert({ variant: props.variant }) : "hidden"}>
+    <div className={display ? alert({ variant }) : "hidden"}>
       <div className="flex flex-col w-[calc(100%-24px)]">
         <div className="font-semibold text-lg">
-          {props.variant === "warning"
+          {variant === "warning"
             ? "Heads up!"
-            : props.variant === "error"
+            : variant === "error"
               ? "We messed up!"
               : "Yay!"}
         </div>
-        <div className="font-medium">{props.text}</div>
+        <div className="font-medium">{text}</div>
       </div>
       <X
         className={
-          (props.variant === "warning"
+          (variant === "warning"
             ? "text-amber-600"
-            : props.variant === "error"
+            : variant === "error"
               ? "text-red-700"
               : "text-green-700") + " cursor-pointer"
         }
-        onClick={() => setDisplay(false)}
+        onClick={() => {
+          setDisplay(false);
+        }}
         size={24}
       />
     </div>
