@@ -32,7 +32,7 @@ export default function RootLayout({
               },
             }}
           />
-          <div className="w-full h-20 fixed top-0 z-50">
+          <div className="w-full h-16 sm:h-20 fixed top-0 z-50">
             <Navbar />
           </div>
           <div className="w-full min-h-screen">{children}</div>
