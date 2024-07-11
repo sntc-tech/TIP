@@ -1,10 +1,9 @@
 TODO:
  Set hard limit of 300 on events
- Container overflow on profile page
- Add contacts everywhere
  Change event pics
  Add favicon and metadata
  Design opengraph images and text
  (maybe) give option to un-register from event
  Add links on footer icons
+ Make event names on profile page hyperlinks
  Add phone numbers and mail IDs on events/contact page
