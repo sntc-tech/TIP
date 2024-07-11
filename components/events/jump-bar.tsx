@@ -12,7 +12,7 @@ const JumpBar = () => {
     <>
       <div
         className={
-          "w-full bg-zinc-100 px-5 md:px-12 py-5 flex justify-between cursor-pointer" +
+          "w-full bg-zinc-100 px-5 md:px-12 py-5 flex items-center justify-between cursor-pointer" +
           (!toggle && " border-b-2 border-zinc-900/[0.1]")
         }
         onClick={() => setToggle(!toggle)}

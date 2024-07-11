@@ -40,7 +40,7 @@ const EventsPage = () => {
   return (
     <div className="relative">
       <EventsHeader />
-      <div className="sticky top-20 z-40">
+      <div className="sticky top-16 sm:top-20 z-40">
         <JumpBar />
       </div>
       <div></div>
