@@ -62,9 +62,9 @@ const ProfileCard = () => {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-2.5 items-center mb-12">
-          <div className="text-xl font-medium">Email</div>
+          <div className="text-lg font-semibold">Email</div>
           <Link href="">
-            <div className="text-xl text-sky-500 underline">
+            <div className="text-base text-sky-500 underline">
               {userData?.email || "testmail@gmail.com"}
             </div>
           </Link>
@@ -73,6 +73,7 @@ const ProfileCard = () => {
           Registered events
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+          {userData?.registeredEvents && "No events found!"}
           {userData?.registeredEvents?.map((event: string) => (
             <div className="text-lg" key={event}>
               {event}
