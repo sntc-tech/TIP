@@ -11,6 +11,7 @@ import { signInWithGooglePopup } from "@/firebase/firebase";
 import { UserContext } from "@/context/user-context";
 import { createUserDoc } from "@/lib/actions";
 import toast from "react-hot-toast";
+import { setUserCookie } from "@/lib/server-actions";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -22,6 +23,7 @@ const Navbar = () => {
       const { user } = await signInWithGooglePopup();
       setCurrentUserID(user.uid);
       await createUserDoc(user);
+      await setUserCookie(user.uid);
       toast.success("Signed in successfully!");
       router.push("/profile");
     } catch (e) {
