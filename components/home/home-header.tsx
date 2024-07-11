@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const HomeHeader = () => {
   return (
-    <div className="w-screen h-[80vh] bg-[url(https://res.cloudinary.com/dpzccxjgr/image/upload/v1720677092/pic-3_ginyy7.png)] bg-center bg-cover flex flex-col px-12 py-12 justify-center items-center md:items-start text-zinc-100">
+    <div className="w-screen h-[80vh] bg-[url('https://res.cloudinary.com/dpzccxjgr/image/upload/v1720677092/pic-3_ginyy7.png')] bg-center bg-cover flex flex-col px-12 py-12 justify-center items-center md:items-start text-zinc-100">
       <div className="text-4xl md:text-6xl font-semibold tracking-tight text-center md:text-left">
         Technical Induction Program &apos;24
       </div>

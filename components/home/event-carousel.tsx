@@ -22,7 +22,7 @@ const EventCarousel = () => {
     <>
       <div className="w-full flex flex-row gap-0 min-h-[500px] relative">
         <div
-          className="flex absolute left-0 top-0 h-full px-2 py-12 flex-col justify-center items-center text-zinc-100"
+          className="flex absolute left-0 top-0 z-10 cursor-pointer h-full px-2 py-12 flex-col justify-center items-center text-zinc-100"
           onClick={() => {
             setIndex((prevIndex) =>
               prevIndex <= 0
@@ -40,41 +40,50 @@ const EventCarousel = () => {
             <div className="hidden md:block w-1/3 bg-zinc-900" key={i}>
               <div
                 className={
-                  "bg-[url('" +
-                  data.img +
-                  "')] bg-center bg-cover w-full h-full p-5 lg:p-12" +
-                  " text-zinc-100" +
-                  " flex flex-col justify-end items-start uppercase relative" +
+                  "w-full h-full text-zinc-100" +
+                  " flex flex-col justify-end items-start uppercase " +
                   styles.carouselItem
                 }
+                style={{
+                  background: "url(" + data.img + ")",
+                  backgroundSize: "cover",
+                }}
                 key={index}
               >
-                <div className="w-full text-2xl lg:text-4xl font-semibold tracking-tight md:leading-normal truncate">
-                  {data.name}
+                <div className="w-full p-5 bg-zinc-900/[0.7] ">
+                  <div className="w-full truncate text-2xl lg:text-4xl font-semibold tracking-tight md:leading-normal ">
+                    {data.name}
+                  </div>
+                  <Link href={`/events#event-${data.id}`}>
+                    <Button variant="transparent">details</Button>
+                  </Link>
                 </div>
-                <Link href={`/events#event-${data.id}`}>
-                  <Button variant="transparent">details</Button>
-                </Link>
               </div>
             </div>
           ))}
         <div
           className={
-            "flex md:hidden w-full bg-[url(" +
-            eventData[index].img +
-            ")] bg-center bg-cover flex-col justify-end items-start uppercase text-zinc-100 p-5 " +
+            "flex md:hidden w-full flex-col justify-end" +
+            " items-start" +
+            " uppercase text-zinc-100 " +
             styles.carouselItem
           }
+          style={{
+            backgroundImage: "url(" + eventData[index].img + ")",
+            backgroundSize: "cover",
+          }}
         >
-          <div className="w-full text-2xl font-semibold tracking-tight leading-normal truncate">
-            {eventData[index].name}
+          <div className="w-full p-5 bg-zinc-900/[0.7]">
+            <div className="w-full text-2xl font-semibold tracking-tight leading-normal truncate">
+              {eventData[index].name}
+            </div>
+            <Link href={`/events#event-${eventData[index].id}`}>
+              <Button variant="transparent">details</Button>
+            </Link>
           </div>
-          <Link href={`/events#event-${eventData[index].id}`}>
-            <Button variant="transparent">details</Button>
-          </Link>
         </div>
         <div
-          className="flex absolute right-0 top-0 h-full px-2 py-12 flex-col justify-center items-center text-zinc-100"
+          className="flex absolute right-0 top-0 z-10 cursor-pointer h-full px-2 py-12 flex-col justify-center items-center text-zinc-100"
           onClick={() => {
             setIndex((prevIndex) => (prevIndex + 1) % eventData.length);
           }}

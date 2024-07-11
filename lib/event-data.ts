@@ -3,6 +3,7 @@ export const eventData = [
     id: 1,
     name: "Basics of Programming",
     img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694345/goran-ivos-iOykDIkZLQw-unsplash_ivymw3.png",
+    // img: "https://wikimediafoundation.org/wp-content/uploads/2018/07/640px-Space_Shuttle_Endeavor_in_Los_Angeles_-_2012_37919560104.jpg?w=640",
     date: "12 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
