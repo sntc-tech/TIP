@@ -50,6 +50,8 @@ const EventSection = ({ props, regEvents, setRegEvents }: Props) => {
     >
       <Image
         src={props.img || HeaderPic}
+        width={1920}
+        height={1080}
         alt={props.name || "Undefined Event"}
         className="w-full sm:w-[500px] lg:w-[300px] min-h-[300px] object-cover mb-5 lg:mb-0"
       />

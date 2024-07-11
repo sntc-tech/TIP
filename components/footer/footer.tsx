@@ -1,7 +1,8 @@
 import React from "react";
 import sntcLogo from "@/public/sntc.png";
 import Image from "next/image";
-import { Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -30,9 +31,11 @@ const Footer = () => {
           professional tech-environment.
         </div>
         <div className="flex gap-2.5">
-          <Mail />
-          <Phone />
+          <Link href={"mailto:technical_secretary@students.iitmandi.ac.in"}>
+            <Mail />
+          </Link>
           <Linkedin />
+          <Github />
         </div>
         <div className="absolute bottom-0 left-0 text-sm text-zinc-500">
           Copyright © 2024, SnTC, IIT Mandi.

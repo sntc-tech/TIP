@@ -40,10 +40,11 @@ const EventCarousel = () => {
             <div className="hidden md:block w-1/3 bg-zinc-900" key={i}>
               <div
                 className={
-                  "bg-[url(" +
-                  data.imgPath +
-                  ")] bg-center bg-cover w-full h-full bg-red-400 p-5 lg:p-12 text-zinc-100" +
-                  " flex flex-col justify-end items-start uppercase " +
+                  "bg-[url('" +
+                  data.img +
+                  "')] bg-center bg-cover w-full h-full p-5 lg:p-12" +
+                  " text-zinc-100" +
+                  " flex flex-col justify-end items-start uppercase relative" +
                   styles.carouselItem
                 }
                 key={index}

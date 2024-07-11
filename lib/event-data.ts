@@ -1,11 +1,8 @@
-import HeaderPic from "@/public/images/header.png";
-
 export const eventData = [
   {
     id: 1,
     name: "Basics of Programming",
-    img: HeaderPic,
-    imgPath: "/images/header.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694345/goran-ivos-iOykDIkZLQw-unsplash_ivymw3.png",
     date: "12 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
@@ -16,8 +13,7 @@ export const eventData = [
   {
     id: 2,
     name: "MCU and Sensors",
-    img: HeaderPic,
-    imgPath: "/images/header.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694422/jorge-ramirez-i1kEMeExnkQ-unsplash_la61gx.png",
     date: "14 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
@@ -28,8 +24,7 @@ export const eventData = [
   {
     id: 3,
     name: "Profile Management",
-    img: HeaderPic,
-    imgPath: "/images/header.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694555/carl-heyerdahl-KE0nC8-58MQ-unsplash_rbtc7a.png",
     date: "16 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
@@ -40,8 +35,7 @@ export const eventData = [
   {
     id: 4,
     name: "SolidWorks and 3D Printing",
-    img: HeaderPic,
-    imgPath: "/images/header.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694775/kadir-celep-NwOeoxUY_p0-unsplash_1_bq281a.png",
     date: "17 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
@@ -52,8 +46,7 @@ export const eventData = [
   {
     id: 5,
     name: "Stock Market and Startups",
-    img: HeaderPic,
-    imgPath: "/images/header.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694832/gilly-wcWN29NufMQ-unsplash_qckzvn.png",
     date: "19 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
@@ -64,8 +57,7 @@ export const eventData = [
   {
     id: 6,
     name: "Intro to Git/GitHub",
-    img: HeaderPic,
-    imgPath: "/images/header.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694907/praveen-thirumurugan-KPAQpJYzH0Y-unsplash_wt5axn.png",
     date: "23 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
@@ -76,8 +68,7 @@ export const eventData = [
   {
     id: 7,
     name: "The Linux Ecosystem",
-    img: HeaderPic,
-    imgPath: "/images/header.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694983/gabriel-heinzer-4Mw7nkQDByk-unsplash_okjxs4.png",
     date: "27 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
@@ -88,8 +79,7 @@ export const eventData = [
   {
     id: 8,
     name: "Cybersecurity, Blockchain and GenAI",
-    img: HeaderPic,
-    imgPath: "/images/header.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720695031/traxer-kM6QNrgo0YE-unsplash_xlcein.png",
     date: "30 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
