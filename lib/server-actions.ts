@@ -17,3 +17,7 @@ export const setUserCookie = async (userID: string) => {
     maxAge: 60 * 60 * 24 * 7,
   });
 };
+
+export const destroyCookie = async () => {
+  cookies().delete("user_id");
+};

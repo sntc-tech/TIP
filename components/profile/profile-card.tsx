@@ -8,9 +8,11 @@ import { useRouter } from "next/navigation";
 import UserPic from "@/public/user.png";
 import { getUserDoc } from "@/lib/actions";
 import { DocumentData } from "@firebase/firestore";
+import toast from "react-hot-toast";
+import { destroyCookie } from "@/lib/server-actions";
 
 const ProfileCard = () => {
-  const { currentUserID } = useContext(UserContext);
+  const { currentUserID, setCurrentUserID } = useContext(UserContext);
   const router = useRouter();
   const [userData, setUserData] = useState<DocumentData>({});
 
@@ -29,6 +31,13 @@ const ProfileCard = () => {
     }
   }, [currentUserID]);
 
+  const signOut = async () => {
+    setCurrentUserID(null);
+    await destroyCookie();
+    toast.success("Signed out successfully!");
+    router.push("/");
+  };
+
   return (
     <div className="grid grid-cols-12 mb-12">
       <div className="p-5 sm:p-12 col-start-2 col-span-10 lg:col-start-4 lg:col-span-6 border-2 border-zinc-200 bg-zinc-200/[0.2] rounded-md mt-12">
@@ -44,7 +53,10 @@ const ProfileCard = () => {
             <div className="text-4xl md:text-5xl font-semibold tracking-tight">
               {userData?.displayName || "Username"}
             </div>
-            <div className="text-lg font-medium text-sky-500 underline">
+            <div
+              className="text-lg font-medium text-sky-500 underline cursor-pointer hover:text-sky-600"
+              onClick={signOut}
+            >
               Sign out
             </div>
           </div>

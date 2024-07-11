@@ -10,7 +10,7 @@ interface Props {
 
 export const UserContext = createContext<{
   currentUserID: string | null;
-  setCurrentUserID: (userID: string) => void;
+  setCurrentUserID: (userID: string | null) => void;
 }>({
   currentUserID: null,
   setCurrentUserID: () => null,

@@ -10,6 +10,7 @@ import { createUserDoc } from "@/lib/actions";
 import { UserContext } from "@/context/user-context";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { setUserCookie } from "@/lib/server-actions";
 
 const LoginPrompt = () => {
   const { setCurrentUserID } = useContext(UserContext);
@@ -20,6 +21,7 @@ const LoginPrompt = () => {
       const { user } = await signInWithGooglePopup();
       setCurrentUserID(user.uid);
       await createUserDoc(user);
+      await setUserCookie(user.uid);
       toast.success("Signed in successfully!");
       router.push("/profile");
     } catch (e) {
