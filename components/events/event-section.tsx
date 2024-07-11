@@ -11,7 +11,7 @@ interface Props {
   props: {
     id: number | string;
     name: string;
-    img: StaticImport;
+    img: string | StaticImport;
     date: string;
     time: string;
     location: string;
