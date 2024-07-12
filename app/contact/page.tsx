@@ -1,7 +1,6 @@
 import React from "react";
 import ContactHeader from "@/components/contact/contact-header";
 import Alert from "@/components/alert/alert";
-import ContactCard from "@/components/contact/contact-card";
 
 const ContactPage = () => {
   return (
@@ -14,18 +13,12 @@ const ContactPage = () => {
         </Alert>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 px-12 pb-24">
-        <div className="sm:col-span-2 text-4xl md:text-6xl font-semibold tracking-tight text-center md:text-left">
-          Section Title
-        </div>
-        <ContactCard />
-        <ContactCard />
+        <div className="sm:col-span-2 text-4xl md:text-6xl font-semibold tracking-tight text-center md:text-left"></div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 px-12 pb-24">
         <div className="sm:col-span-2 text-4xl md:text-6xl font-semibold tracking-tight text-center md:text-left">
           Section Title
         </div>
-        <ContactCard />
-        <ContactCard />
       </div>
     </div>
   );

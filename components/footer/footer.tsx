@@ -34,7 +34,12 @@ const Footer = () => {
           <Link href={"mailto:technical_secretary@students.iitmandi.ac.in"}>
             <Mail />
           </Link>
-          <Linkedin />
+          <Link
+            href={"https://www.linkedin.com/in/born-engineer73/"}
+            target="_blank"
+          >
+            <Linkedin />
+          </Link>
           <Github />
         </div>
         <div className="absolute bottom-0 left-0 text-sm text-zinc-500">

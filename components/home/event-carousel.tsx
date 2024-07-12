@@ -47,6 +47,7 @@ const EventCarousel = () => {
                 style={{
                   background: "url(" + data.img + ")",
                   backgroundSize: "cover",
+                  backgroundPosition: "center",
                 }}
                 key={index}
               >
@@ -71,6 +72,7 @@ const EventCarousel = () => {
           style={{
             backgroundImage: "url(" + eventData[index].img + ")",
             backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <div className="w-full p-5 bg-zinc-900/[0.7]">
