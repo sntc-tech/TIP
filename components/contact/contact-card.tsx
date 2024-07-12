@@ -10,16 +10,16 @@ interface Props {
 const ContactCard = ({ name, mail, phone }: Props) => {
   return (
     <div className="font-medium text-center md:text-left">
-      <div className="text-xl md:text-2xl mb-2.5">{name}</div>
+      <div className="font-medium text-xl md:text-2xl mb-2.5">{name}</div>
       {mail && (
-        <div className="flex flex-row gap-2.5 items-center justify-center md:justify-start text-zinc-400">
-          <Mail size={24} />
+        <div className="flex flex-row flex-wrap mb-1 items-center justify-center md:justify-start text-zinc-400">
+          <Mail size={24} className="mr-2.5" />
           {mail}
         </div>
       )}
       {phone && (
-        <div className="flex flex-row gap-2.5 items-center justify-center md:justify-start text-zinc-400">
-          <Phone size={24} />
+        <div className="flex flex-row mb-1 items-center justify-center md:justify-start text-zinc-400">
+          <Phone size={24} className="mr-2.5" />
           {phone}
         </div>
       )}

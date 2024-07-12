@@ -1,7 +1,4 @@
 TODO:
  Add favicon and metadata
  Design opengraph images and text
- Add links on footer icons
- Add phone numbers and mail IDs on events/contact page
- Compress images on Cloudinary and update URLs
  Automate process of retrieving mailing list on Firebase

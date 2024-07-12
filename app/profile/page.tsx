@@ -3,7 +3,7 @@ import ProfileCard from "@/components/profile/profile-card";
 
 const ProfilePage = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-20 fade-in-page">
       <ProfileCard />
     </div>
   );

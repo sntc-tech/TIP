@@ -38,7 +38,7 @@ const EventsPage = () => {
   }, [regEvents]);
 
   return (
-    <div className="relative">
+    <div className="relative fade-in-page">
       <EventsHeader />
       <div className="sticky top-16 sm:top-20 z-40">
         <JumpBar />
