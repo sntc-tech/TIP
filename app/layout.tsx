@@ -10,7 +10,8 @@ const jost = Jost({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "TIP '24 | IIT Mandi",
-  description: "Some description",
+  description:
+    "A month long event aimed to orient IIT Mandi freshers towards our technical scene.",
 };
 
 export default function RootLayout({
