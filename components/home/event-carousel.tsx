@@ -5,11 +5,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Button from "@/components/button/button";
 import { eventData } from "@/lib/event-data";
 import styles from "./event-carousel.module.scss";
-// import useSwipe from "@/components/home/use-swipe";
+import useSwipe from "@/components/home/use-swipe";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 const EventCarousel = () => {
   const [index, setIndex] = useState(0);
+  const swipeHandlers = useSwipe({
+    onSwipedLeft: () => toast.success("left"),
+    onSwipedRight: () => toast.success("right"),
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -21,7 +26,10 @@ const EventCarousel = () => {
 
   return (
     <>
-      <div className="w-full flex flex-row gap-0 min-h-[500px] relative">
+      <div
+        className="w-full flex flex-row gap-0 min-h-[500px] relative"
+        {...swipeHandlers}
+      >
         <div
           className="flex absolute left-0 top-0 z-10 cursor-pointer h-full px-2 py-12 flex-col justify-center items-center text-zinc-100"
           onClick={() => {
