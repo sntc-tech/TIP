@@ -36,3 +36,5 @@ export const getUserDoc = async (userID: string) => {
   }
   return userSnapshot.data();
 };
+
+export const getEventList = async () => {};

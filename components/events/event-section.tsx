@@ -19,7 +19,7 @@ interface Props {
     by: string;
     contact: string;
   };
-  regEvents: string[];
+  regEvents: string[] | undefined;
   setRegEvents: (event: string[]) => void;
 }
 
@@ -28,19 +28,33 @@ const EventSection = ({ props, regEvents, setRegEvents }: Props) => {
 
   const registerUser = () => {
     if (currentUserID) {
-      if (!regEvents.includes(props.name)) {
-        setRegEvents([...regEvents, props.name]);
-        toast.success("Registration successful!");
+      if (regEvents) {
+        if (!regEvents.includes(props.name)) {
+          setRegEvents([...regEvents, props.name]);
+          toast.success("Registration successful!");
+        } else {
+          toast("You've already registered!");
+        }
       } else {
-        toast("You've already registered!");
+        setRegEvents([props.name]);
+        toast.success("Registration successful!");
       }
     } else {
       toast.error("You need to log in first!");
     }
   };
 
+  const unregisterUser = () => {
+    if (currentUserID && regEvents) {
+      setRegEvents(regEvents.filter((event) => event !== props.name));
+      toast.success("Unregistration successful!");
+    } else {
+      toast.error("You need to log in first!");
+    }
+  };
+
   const isUserRegistered = () => {
-    return regEvents.includes(props.name);
+    return regEvents?.includes(props.name);
   };
 
   return (
@@ -88,11 +102,11 @@ const EventSection = ({ props, regEvents, setRegEvents }: Props) => {
         </div>
         <div className="mt-5 lg:mt-0 lg:absolute lg:bottom-0 lg:left-5">
           <Button
-            onClick={registerUser}
-            variant={isUserRegistered() ? "disabled" : "gradient"}
+            onClick={isUserRegistered() ? unregisterUser : registerUser}
+            variant={isUserRegistered() ? "black" : "gradient"}
           >
             {" "}
-            {isUserRegistered() ? "Registered" : "Register"}
+            {isUserRegistered() ? "Unregister" : "Register"}
           </Button>
         </div>
       </div>

@@ -1,6 +1,6 @@
 export const eventData = [
   {
-    id: 1,
+    id: "MQDJ5oYBxosaXBeJu2LT",
     name: "Basics of Programming",
     img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694345/goran-ivos-iOykDIkZLQw-unsplash_ivymw3.png",
     // img: "https://wikimediafoundation.org/wp-content/uploads/2018/07/640px-Space_Shuttle_Endeavor_in_Los_Angeles_-_2012_37919560104.jpg?w=640",
@@ -12,7 +12,7 @@ export const eventData = [
     contact: "pc@iitmandi.ac.in",
   },
   {
-    id: 2,
+    id: "neKqtIjqUhc0QeHrpxek",
     name: "MCU and Sensors",
     img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694422/jorge-ramirez-i1kEMeExnkQ-unsplash_la61gx.png",
     date: "14 Aug '24",
@@ -23,7 +23,7 @@ export const eventData = [
     contact: "robotronics@students.iitmandi.ac.in",
   },
   {
-    id: 3,
+    id: "DYT3hZXSs38QGrCqEno9",
     name: "Profile Management",
     img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694555/carl-heyerdahl-KE0nC8-58MQ-unsplash_rbtc7a.png",
     date: "16 Aug '24",
@@ -34,7 +34,7 @@ export const eventData = [
     contact: "TBD",
   },
   {
-    id: 4,
+    id: "X5MACE2nBwTgLQWp5p0k",
     name: "SolidWorks and 3D Printing",
     img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694775/kadir-celep-NwOeoxUY_p0-unsplash_1_bq281a.png",
     date: "17 Aug '24",
@@ -45,7 +45,7 @@ export const eventData = [
     contact: "yantrik_club@students.iitmandi.ac.in",
   },
   {
-    id: 5,
+    id: "OL3mbDsLfSWGT1pkEATm",
     name: "Stock Market and Startups",
     img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694832/gilly-wcWN29NufMQ-unsplash_qckzvn.png",
     date: "19 Aug '24",
@@ -56,7 +56,7 @@ export const eventData = [
     contact: "edc@students.iitmandi.ac.in",
   },
   {
-    id: 6,
+    id: "Y9IHnTEHTVhYNDvh7Gpu",
     name: "Intro to Git/GitHub",
     img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694907/praveen-thirumurugan-KPAQpJYzH0Y-unsplash_wt5axn.png",
     date: "23 Aug '24",
@@ -67,7 +67,7 @@ export const eventData = [
     contact: "pc@iitmandi.ac.in",
   },
   {
-    id: 7,
+    id: "EUizKAGgkUoCXE7mOLHY",
     name: "The Linux Ecosystem",
     img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694983/gabriel-heinzer-4Mw7nkQDByk-unsplash_okjxs4.png",
     date: "27 Aug '24",
@@ -78,7 +78,7 @@ export const eventData = [
     contact: "TBD",
   },
   {
-    id: 8,
+    id: "a0apMDoK6py5VCOWjufx",
     name: "Cybersecurity, Blockchain and GenAI",
     img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720695031/traxer-kM6QNrgo0YE-unsplash_xlcein.png",
     date: "30 Aug '24",
@@ -86,6 +86,6 @@ export const eventData = [
     location: "A18-1A",
     desc: "As part of our Technical Induction Programme (TIP) organized by SnTC, we are thrilled to present a session on 'Cybersecurity, Blockchain, and Generative AI' for first-year students on 30-Aug-2024. This session aims to provide an understanding of the fundamentals of cybersecurity and its critical importance in the digital age. Students will also gain a basic understanding of blockchain technology and its underlying principles. Additionally, the session will introduce the concept of Generative AI, exploring how it differs from other AI technologies. This session will equip students with essential knowledge of these cutting-edge fields, fostering a deeper interest and readiness for future innovations.",
     by: "SAIC",
-    contact: "stac@students.iitmandi.ac.in",
+    contact: "TBD",
   },
 ];

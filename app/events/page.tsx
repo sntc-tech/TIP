@@ -12,7 +12,7 @@ import { eventData } from "@/lib/event-data";
 import EventSection from "@/components/events/event-section";
 
 const EventsPage = () => {
-  const [regEvents, setRegEvents] = useState<string[]>([]);
+  const [regEvents, setRegEvents] = useState<string[]>();
   const { currentUserID } = useContext(UserContext);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const EventsPage = () => {
     (async () => {
       if (currentUserID) {
         const userDoc = doc(db, "users", currentUserID);
-        if (regEvents.length) {
+        if (regEvents) {
           await updateDoc(userDoc, {
             registeredEvents: regEvents,
           });
@@ -46,8 +46,8 @@ const EventsPage = () => {
       <div></div>
       <div className="flex flex-col items-center gap-5 px-5 py-12 md:px-12">
         <Alert variant="warning">
-          Since the venue can only accommodate a maximum of 300 students, only
-          the first 300 students to register will be considered.
+          Since the venue can only accommodate a maximum of 350 students, only
+          the first 350 students to register will be considered.
         </Alert>
         {eventData.map((event) => (
           <EventSection
