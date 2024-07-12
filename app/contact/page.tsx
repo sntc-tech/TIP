@@ -72,7 +72,10 @@ const ContactPage = () => {
           name={"Shubham S Padhi"}
           mail={"b23295@students.iitmandi.ac.in"}
         />
-        <ContactCard name={"Vinamra Garg"} mail={"@students.iitmandi.ac.in"} />
+        <ContactCard
+          name={"Vinamra Garg"}
+          mail={"b23302@students.iitmandi.ac.in"}
+        />
       </div>
     </div>
   );
