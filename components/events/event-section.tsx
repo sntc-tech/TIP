@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import Image from "next/image";
 import { Calendar, Clock, Mail, Pin } from "lucide-react";
 import Button from "@/components/button/button";
-import HeaderPic from "@/public/images/header.png";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { UserContext } from "@/context/user-context";
 import toast from "react-hot-toast";
@@ -73,7 +72,7 @@ const EventSection = ({ props, regEvents, setRegEvents }: Props) => {
       id={`event-${props.id}`}
     >
       <Image
-        src={props.img || HeaderPic}
+        src={props.img}
         width={1920}
         height={1080}
         alt={props.name || "Undefined Event"}

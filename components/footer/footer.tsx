@@ -24,7 +24,7 @@ const Footer = () => {
           About TIP
         </div>
         <div className="text-zinc-500 max-w-screen-lg mb-12">
-          The Technical Induction Programme is aimed at introducing the
+          The Technical Induction Program is aimed at introducing the
           participants with key technical skills and tools, providing them with
           guidance and support by laying a solid foundation in top tech
           competencies to ensure a seamless transition from school to a
