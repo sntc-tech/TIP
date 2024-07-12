@@ -7,13 +7,20 @@ import { eventData } from "@/lib/event-data";
 import styles from "./event-carousel.module.scss";
 import useSwipe from "@/components/home/use-swipe";
 import Link from "next/link";
-import toast from "react-hot-toast";
 
 const EventCarousel = () => {
   const [index, setIndex] = useState(0);
   const swipeHandlers = useSwipe({
-    onSwipedLeft: () => toast.success("left"),
-    onSwipedRight: () => toast.success("right"),
+    onSwipedLeft: () => {
+      setIndex((prevIndex) => (prevIndex + 1) % eventData.length);
+    },
+    onSwipedRight: () => {
+      setIndex((prevIndex) =>
+        prevIndex <= 0
+          ? eventData.length + (prevIndex - 1)
+          : (prevIndex - 1) % eventData.length,
+      );
+    },
   });
 
   useEffect(() => {
