@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Button from "@/components/button/button";
 import { eventData } from "@/lib/event-data";
 import styles from "./event-carousel.module.scss";
+// import useSwipe from "@/components/home/use-swipe";
 import Link from "next/link";
 
 const EventCarousel = () => {
