@@ -24,7 +24,7 @@ export const eventData = [
   {
     id: "DYT3hZXSs38QGrCqEno9",
     name: "Profile Management",
-    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694555/carl-heyerdahl-KE0nC8-58MQ-unsplash_rbtc7a.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720779395/carl-heyerdahl-KE0nC8-58MQ-unsplash_rozruo.jpg",
     date: "16 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
@@ -35,7 +35,7 @@ export const eventData = [
   {
     id: "X5MACE2nBwTgLQWp5p0k",
     name: "SolidWorks and 3D Printing",
-    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694775/kadir-celep-NwOeoxUY_p0-unsplash_1_bq281a.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720779396/kadir-celep-NwOeoxUY_p0-unsplash_1_jxujo6.png",
     date: "17 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
@@ -46,7 +46,7 @@ export const eventData = [
   {
     id: "OL3mbDsLfSWGT1pkEATm",
     name: "Stock Market and Startups",
-    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694832/gilly-wcWN29NufMQ-unsplash_qckzvn.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720779395/gilly-wcWN29NufMQ-unsplash_uanox3.jpg",
     date: "19 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
@@ -57,7 +57,7 @@ export const eventData = [
   {
     id: "Y9IHnTEHTVhYNDvh7Gpu",
     name: "Intro to Git/GitHub",
-    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694907/praveen-thirumurugan-KPAQpJYzH0Y-unsplash_wt5axn.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720779395/praveen-thirumurugan-KPAQpJYzH0Y-unsplash_n15amq.jpg",
     date: "23 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
@@ -68,7 +68,7 @@ export const eventData = [
   {
     id: "EUizKAGgkUoCXE7mOLHY",
     name: "The Linux Ecosystem",
-    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720694983/gabriel-heinzer-4Mw7nkQDByk-unsplash_okjxs4.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720779396/gabriel-heinzer-4Mw7nkQDByk-unsplash_zszfjx.jpg",
     date: "27 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
@@ -79,7 +79,7 @@ export const eventData = [
   {
     id: "a0apMDoK6py5VCOWjufx",
     name: "Cybersecurity, Blockchain and GenAI",
-    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720695031/traxer-kM6QNrgo0YE-unsplash_xlcein.png",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720779395/traxer-kM6QNrgo0YE-unsplash_ifnowl.jpg",
     date: "30 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
