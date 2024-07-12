@@ -6,10 +6,14 @@ import HeaderPic from "@/public/images/header.png";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { UserContext } from "@/context/user-context";
 import toast from "react-hot-toast";
+import {
+  registerUserInMailingList,
+  unregisterUserFromMailingList,
+} from "@/lib/actions";
 
 interface Props {
   props: {
-    id: number | string;
+    id: string;
     name: string;
     img: string | StaticImport;
     date: string;
@@ -26,8 +30,9 @@ interface Props {
 const EventSection = ({ props, regEvents, setRegEvents }: Props) => {
   const { currentUserID } = useContext(UserContext);
 
-  const registerUser = () => {
+  const registerUser = async () => {
     if (currentUserID) {
+      await registerUserInMailingList(props.id, currentUserID);
       if (regEvents) {
         if (!regEvents.includes(props.name)) {
           setRegEvents([...regEvents, props.name]);
@@ -44,10 +49,15 @@ const EventSection = ({ props, regEvents, setRegEvents }: Props) => {
     }
   };
 
-  const unregisterUser = () => {
-    if (currentUserID && regEvents) {
-      setRegEvents(regEvents.filter((event) => event !== props.name));
-      toast.success("Unregistration successful!");
+  const unregisterUser = async () => {
+    if (currentUserID) {
+      await unregisterUserFromMailingList(props.id, currentUserID);
+      if (regEvents) {
+        setRegEvents(regEvents.filter((event) => event !== props.name));
+        toast.success("Unregistration successful!");
+      } else {
+        toast("You haven't registered for any event!");
+      }
     } else {
       toast.error("You need to log in first!");
     }

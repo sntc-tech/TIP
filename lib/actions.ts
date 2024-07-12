@@ -1,5 +1,12 @@
 import { User } from "firebase/auth";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import {
+  arrayRemove,
+  arrayUnion,
+  doc,
+  getDoc,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
 import { db } from "@/firebase/firebase";
 import toast from "react-hot-toast";
 
@@ -37,4 +44,32 @@ export const getUserDoc = async (userID: string) => {
   return userSnapshot.data();
 };
 
-export const getEventList = async () => {};
+export const registerUserInMailingList = async (
+  eventID: string,
+  userID: string,
+) => {
+  const eventRef = doc(db, "events", eventID);
+  const userSnapshot = await getDoc(doc(db, "users", userID));
+  if (userSnapshot.exists()) {
+    await updateDoc(eventRef, {
+      registered: arrayUnion(userSnapshot.data().email),
+    });
+  } else {
+    toast.error("User not found!");
+  }
+};
+
+export const unregisterUserFromMailingList = async (
+  eventID: string,
+  userID: string,
+) => {
+  const eventRef = doc(db, "events", eventID);
+  const userSnapshot = await getDoc(doc(db, "users", userID));
+  if (userSnapshot.exists()) {
+    await updateDoc(eventRef, {
+      registered: arrayRemove(userSnapshot.data().email),
+    });
+  } else {
+    toast.error("User not found!");
+  }
+};

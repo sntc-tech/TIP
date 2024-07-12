@@ -73,7 +73,6 @@ const ProfileCard = () => {
           Registered events
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-          {userData?.registeredEvents && "No events found!"}
           {userData?.registeredEvents?.map((event: string) => (
             <div className="text-lg" key={event}>
               {event}

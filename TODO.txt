@@ -1,9 +1,7 @@
 TODO:
- Set hard limit of 300 on events
- Change event pics
+ Set hard limit of 350 on events (mailing list)
  Add favicon and metadata
  Design opengraph images and text
- (maybe) give option to un-register from event
  Add links on footer icons
  Make event names on profile page hyperlinks
  Add phone numbers and mail IDs on events/contact page
