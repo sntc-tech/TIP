@@ -87,7 +87,7 @@ const EventSection = ({ props, regEvents, setRegEvents }: Props) => {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae quam nec elit gravida condimentum. Aenean faucibus quam facilisis nibh viverra, eget congue nisl aliquet. Maecenas scelerisque pellentesque facilisis. Ut eu varius tortor, id ultricies nibh. Aliquam sit amet placerat lorem. Quisque nulla enim, euismod eleifend maximus eget, rutrum et arcu. Aliquam euismod porta nulla quis ornare. Sed dictum erat eu sollicitudin consectetur. Aenean vel libero lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae quam nec elit gravida condimentum."}
         </div>
       </div>
-      <div className="mt-5 py-5 lg:mt-0 lg:py-0 w-full lg:w-[300px] border-t-2 lg:border-t-0 lg:border-l-2 border-zinc-900/[0.1] lg:px-5 flex flex-col items-start relative">
+      <div className="mt-5 py-5 lg:mt-0 lg:py-0 w-full lg:w-[300px] border-b-2 lg:border-bx-0 lg:border-l-2 border-zinc-900/[0.1] lg:px-5 flex flex-col items-start relative">
         <div className="text-base text-zinc-400 mb-5">
           Offered by {props.by || "no one"}
         </div>
