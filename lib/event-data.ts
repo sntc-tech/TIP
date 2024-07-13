@@ -13,7 +13,7 @@ export const eventData = [
   {
     id: "neKqtIjqUhc0QeHrpxek",
     name: "MCU and Sensors",
-    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720779395/jorge-ramirez-i1kEMeExnkQ-unsplash_ovaint.jpg",
+    img: "https://res.cloudinary.com/dpzccxjgr/image/upload/v1720845963/WhatsApp_Image_2024-07-13_at_00.12.14_5770e845_e0xsmx.jpg",
     date: "14 Aug '24",
     time: "9pm to 11pm",
     location: "A18-1A",
