@@ -10,16 +10,23 @@ import { doc, updateDoc } from "firebase/firestore";
 import { db } from "@/firebase/firebase";
 import { eventData } from "@/lib/event-data";
 import EventSection from "@/components/events/event-section";
+import { useRouter } from "next/navigation";
 
 const EventsPage = () => {
   const [regEvents, setRegEvents] = useState<string[]>();
-  const { currentUserID } = useContext(UserContext);
+  const { currentUserID, setCurrentUserID } = useContext(UserContext);
+  const router = useRouter();
 
   useEffect(() => {
     (async () => {
       if (currentUserID) {
-        const { registeredEvents } = await getUserDoc(currentUserID);
-        setRegEvents(registeredEvents);
+        try {
+          const { registeredEvents } = await getUserDoc(currentUserID);
+          setRegEvents(registeredEvents);
+        } catch (error) {
+          setCurrentUserID(null);
+          await router.push("/");
+        }
       }
     })();
   }, []);
@@ -29,9 +36,14 @@ const EventsPage = () => {
       if (currentUserID) {
         const userDoc = doc(db, "users", currentUserID);
         if (regEvents) {
-          await updateDoc(userDoc, {
-            registeredEvents: regEvents,
-          });
+          try {
+            await updateDoc(userDoc, {
+              registeredEvents: regEvents,
+            });
+          } catch (error) {
+            setCurrentUserID(null);
+            await router.push("/");
+          }
         }
       }
     })();

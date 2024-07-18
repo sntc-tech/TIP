@@ -26,6 +26,8 @@ const ProfileCard = () => {
           setUserData(data);
         } catch (e) {
           console.error("Error fetching user data:", e);
+          setCurrentUserID(null);
+          router.push("/");
         }
       })();
     }
