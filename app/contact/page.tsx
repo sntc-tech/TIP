@@ -29,7 +29,7 @@ const ContactPage = () => {
         />
         <ContactCard
           name={"Aritra Boral"}
-          phone={9369080567}
+          phone={9433823273}
           mail={"b22198@students.iitmandi.ac.in"}
         />
       </div>

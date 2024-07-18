@@ -46,7 +46,7 @@ const LoginPrompt = () => {
           login with google
         </Button>
         <Link href={"/events"}>
-          <Button variant="outline">browse projects</Button>
+          <Button variant="outline">browse events</Button>
         </Link>
       </div>
     </div>
