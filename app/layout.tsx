@@ -9,9 +9,13 @@ import { Toaster } from "react-hot-toast";
 const jost = Jost({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tip-dev-rust.vercel.app/"),
   title: "TIP '24 | IIT Mandi",
   description:
     "A month long event aimed to orient IIT Mandi freshers towards our technical scene.",
+  openGraph: {
+    images: "/opengraph-image.png",
+  },
 };
 
 export default function RootLayout({
