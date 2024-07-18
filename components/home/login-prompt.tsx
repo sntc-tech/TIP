@@ -19,11 +19,16 @@ const LoginPrompt = () => {
   const loginUser = async () => {
     try {
       const { user } = await signInWithGooglePopup();
-      setCurrentUserID(user.uid);
-      await createUserDoc(user);
-      await setUserCookie(user.uid);
-      toast.success("Signed in successfully!");
-      router.push("/profile");
+      if (user.email && /iitmandi.ac.in/.test(user.email)) {
+        setCurrentUserID(user.uid);
+        await createUserDoc(user);
+        await setUserCookie(user.uid);
+        toast.success("Signed in successfully!");
+        router.push("/profile");
+      } else {
+        toast.error("Please login with your institute ID.");
+        router.push("/");
+      }
     } catch (e) {
       toast.error("Error signing in. More info in console");
       router.push("/");
