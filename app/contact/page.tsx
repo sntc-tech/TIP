@@ -9,7 +9,7 @@ const ContactPage = () => {
       <ContactHeader />
       <div className="flex flex-col items-center px-5 py-12 pb-24 md:px-12">
         <Alert variant="warning">
-          We prefer mails/texts over calls, so we can reply at our own
+          We prefer mails/texts over calls, so that we can reply at our own
           convenience.
         </Alert>
       </div>

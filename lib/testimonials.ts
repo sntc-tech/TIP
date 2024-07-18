@@ -8,7 +8,7 @@ export const testimonials = [
     author: "Author 2",
   },
   {
-    text: "Foster a well-rounded understanding of the field, equipping them with both technical and practical skills for real-world applications",
+    text: "Foster a well-rounded understanding of the field, equipping you with both technical and practical skills for real-world applications",
     author: "Author 3",
   },
   {
