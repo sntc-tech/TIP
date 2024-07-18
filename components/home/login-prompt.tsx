@@ -13,7 +13,7 @@ import toast from "react-hot-toast";
 import { setUserCookie } from "@/lib/server-actions";
 
 const LoginPrompt = () => {
-  const { setCurrentUserID } = useContext(UserContext);
+  const { currentUserID, setCurrentUserID } = useContext(UserContext);
   const router = useRouter();
 
   const loginUser = async () => {
@@ -41,10 +41,16 @@ const LoginPrompt = () => {
         Technical Induction Program.
       </div>
       <div className="flex flex-wrap items-center justify-center gap-2.5">
-        <Button variant="black" onClick={loginUser}>
-          <Image src={GoogleLogo} alt={"Google logo"} width={24} />
-          login with google
-        </Button>
+        {!currentUserID ? (
+          <Button variant="black" onClick={loginUser}>
+            <Image src={GoogleLogo} alt={"Google logo"} width={24} />
+            login with google
+          </Button>
+        ) : (
+          <Button variant="black">
+            <Link href={"/profile"}>Go to Profile</Link>
+          </Button>
+        )}
         <Link href={"/events"}>
           <Button variant="outline">browse events</Button>
         </Link>
