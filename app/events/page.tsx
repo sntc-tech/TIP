@@ -57,11 +57,12 @@ const EventsPage = () => {
 			</div>
 			<div className="flex flex-col items-center gap-5 px-5 py-12 md:px-12">
 				<Alert variant="success">
-					We've rolled out new features in the website, and you can now view the slides and the gallery after the
+					We&apos;ve rolled out new features in the website, and you can now view the slides and the gallery after the
 					session is completed.
 				</Alert>
 				<Alert variant="warning">
-					We've maxed out capacity for all the sessions. Registrations from this point on will be counted, but seating
+					We&apos;ve maxed out capacity for all the sessions. Registrations from this point on will be counted, but
+					seating
 					will be subject to availability in the venue.
 				</Alert>
 				{eventData.map((event) => (
