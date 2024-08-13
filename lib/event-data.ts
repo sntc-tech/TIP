@@ -11,6 +11,7 @@ export const eventData = [
 		contact: "pc@students.iitmandi.ac.in",
 		completed: true,
 		gallery: "https://drive.google.com/drive/folders/1AmQkwf9zd-fPMCw3CjRZpqdASdL5En_D",
+		slides: "https://drive.google.com/drive/folders/1m2B2zangsFC7wnTI4NI1CLOCGXr42oVv",
 	},
 	{
 		id: "neKqtIjqUhc0QeHrpxek",
@@ -24,6 +25,7 @@ export const eventData = [
 		contact: "robotronics@students.iitmandi.ac.in",
 		completed: false,
 		gallery: "",
+		slides: "",
 	},
 	{
 		id: "DYT3hZXSs38QGrCqEno9",
@@ -37,6 +39,7 @@ export const eventData = [
 		contact: "technical_secretary@students.iitmandi.ac.in",
 		completed: false,
 		gallery: "",
+		slides: "",
 	},
 	{
 		id: "X5MACE2nBwTgLQWp5p0k",
@@ -50,6 +53,7 @@ export const eventData = [
 		contact: "yantrik_club@students.iitmandi.ac.in",
 		completed: false,
 		gallery: "",
+		slides: "",
 	},
 	{
 		id: "OL3mbDsLfSWGT1pkEATm",
@@ -63,6 +67,7 @@ export const eventData = [
 		contact: "edc@students.iitmandi.ac.in",
 		completed: false,
 		gallery: "",
+		slides: "",
 	},
 	{
 		id: "Y9IHnTEHTVhYNDvh7Gpu",
@@ -76,6 +81,7 @@ export const eventData = [
 		contact: "pc@students.iitmandi.ac.in",
 		completed: false,
 		gallery: "",
+		slides: "",
 	},
 	{
 		id: "EUizKAGgkUoCXE7mOLHY",
@@ -89,6 +95,7 @@ export const eventData = [
 		contact: "pc@students.iitmandi.ac.in",
 		completed: false,
 		gallery: "",
+		slides: "",
 	},
 	{
 		id: "a0apMDoK6py5VCOWjufx",
@@ -102,5 +109,6 @@ export const eventData = [
 		contact: "saic@students.iitmandi.ac.in",
 		completed: false,
 		gallery: "",
+		slides: "",
 	},
 ];

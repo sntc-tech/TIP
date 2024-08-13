@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import Image from "next/image";
-import {Calendar, Clock, Mail, Pin} from "lucide-react";
+import {AppWindow, Calendar, Clock, Mail, Pin} from "lucide-react";
 import {StaticImport} from "next/dist/shared/lib/get-img-props";
 import {UserContext} from "@/context/user-context";
 import toast from "react-hot-toast";
@@ -21,6 +21,7 @@ interface Props {
 		contact: string;
 		completed: boolean;
 		gallery: string;
+		slides: string;
 	};
 	regEvents: string[] | undefined;
 	setRegEvents: (event: string[]) => void;
@@ -105,12 +106,21 @@ const EventSection = ({props, regEvents, setRegEvents}: Props) => {
 						<Pin size={24}/>
 						{props.location || "TBD"}
 					</div>
-					<Link href={`mailto:${props.contact}`}>
-						<div className="flex flex-row gap-2.5 mt-2.5 items-center text-sky-500">
-							<Mail size={24}/>
-							{props.contact || "90909 09090"}
-						</div>
-					</Link>
+					{props.completed ? (
+						<Link href={props.slides || "/"} target={"_blank"}>
+							<div className="flex flex-row gap-2.5 mt-2.5 items-center text-sky-500">
+								<AppWindow size={24}/>
+								Session slides
+							</div>
+						</Link>
+					) : (
+						<Link href={`mailto:${props.contact}`}>
+							<div className="flex flex-row gap-2.5 mt-2.5 items-center text-sky-500">
+								<Mail size={24}/>
+								{props.contact || "90909 09090"}
+							</div>
+						</Link>
+					)}
 				</div>
 				<div className="mt-5 lg:mt-0 lg:absolute lg:bottom-0 lg:left-5">
 					{!props.completed ? (
@@ -123,7 +133,7 @@ const EventSection = ({props, regEvents, setRegEvents}: Props) => {
 						</Button>
 					) : (
 						<Link href={props.gallery || "/"} target={"_blank"}>
-							<Button variant={"black"}>Gallery</Button>
+							<Button variant={"gradient"}>Gallery</Button>
 						</Link>
 					)}
 				</div>

@@ -55,11 +55,14 @@ const EventsPage = () => {
 			<div className="sticky top-16 sm:top-20 z-40">
 				<JumpBar/>
 			</div>
-			<div></div>
 			<div className="flex flex-col items-center gap-5 px-5 py-12 md:px-12">
+				<Alert variant="success">
+					We've rolled out new features in the website, and you can now view the slides and the gallery after the
+					session is completed.
+				</Alert>
 				<Alert variant="warning">
-					Since the venue can only accommodate a maximum of 350 students, only
-					the first 350 students to register will be considered.
+					We've maxed out capacity for all the sessions. Registrations from this point on will be counted, but seating
+					will be subject to availability in the venue.
 				</Alert>
 				{eventData.map((event) => (
 					<EventSection
