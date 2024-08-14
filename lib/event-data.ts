@@ -23,9 +23,9 @@ export const eventData = [
 		desc: "Join us for an insightful session on microcontrollers and sensors, part of the Technical Induction Program organized by the SnTC core team. This lecture will introduce you to the basics of microcontroller architecture, sensor interfacing, and essential programming techniques. You'll gain practical knowledge and hands-on experience that will be invaluable for your projects and coursework. Whether you're new to the world of microcontrollers or looking to deepen your understanding, this session is designed to equip you with the foundational skills needed for your first year and beyond. Register now to kickstart your technical journey!",
 		by: "Yantrik and the Robotronics Club",
 		contact: "robotronics@students.iitmandi.ac.in",
-		completed: false,
-		gallery: "",
-		slides: "",
+		completed: true,
+		gallery: "https://drive.google.com/drive/folders/1JacE4IgqrY9bngQHhlrcpxrw0M4o7Q_r",
+		slides: "https://drive.google.com/drive/folders/17GUBhGwavEDsjJdRtv_0yHIzy4W-ste-",
 	},
 	{
 		id: "DYT3hZXSs38QGrCqEno9",
