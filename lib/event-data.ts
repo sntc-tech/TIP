@@ -57,9 +57,11 @@ export const eventData = [
     desc: "Embark on an exciting journey into the world of SolidWorks and 3D printing as part of the Technical Induction Program organized by the SnTC core team. This lecture will introduce you to the fundamentals of SolidWorks, featuring practical examples and interactive Q&A sessions to deepen your understanding. You will also explore the significant applications of 3D printing, demonstrating how it transforms the design and manufacturing process by making it more efficient, innovative, and cost-effective. Whether you are new to SolidWorks and 3D printing or looking to broaden your knowledge, this session is designed to equip you with essential skills for your first year and beyond. Register now to start your technical journey with us!",
     by: "Yantrik Club",
     contact: "yantrik_club@students.iitmandi.ac.in",
-    completed: false,
-    gallery: "",
-    slides: "",
+    completed: true,
+    gallery:
+      "https://drive.google.com/drive/folders/1AwBHAWcjV23L8zzxiMgpqqMwDM7gnqNx?usp=sharing",
+    slides:
+      "https://drive.google.com/drive/folders/17Am-_MudzFJxJf6PiZV7aSTpRfiWtQc1",
   },
   {
     id: "OL3mbDsLfSWGT1pkEATm",
