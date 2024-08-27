@@ -74,7 +74,8 @@ export const eventData = [
     by: "E-Cell",
     contact: "edc@students.iitmandi.ac.in",
     completed: true,
-    gallery: "",
+    gallery:
+      "https://drive.google.com/drive/folders/1ce_GkES_OOHKh1i4PQQa5gtpG6Zap_VH?usp=sharing",
     slides:
       "https://drive.google.com/drive/folders/1XdLyw5QukdyxCdNu0eTZZWDA-tx2K3lU?usp=sharing",
   },
