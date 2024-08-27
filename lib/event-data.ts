@@ -73,9 +73,10 @@ export const eventData = [
     desc: "Discover the essentials of the stock market and startup development in this engaging session. Organized by the E-Cell team, this lecture will introduce key concepts of market dynamics, investment strategies, and financial literacy. You'll also explore the stages of startup development, from ideation and scaling to exit strategies. Whether you're an aspiring entrepreneur or keen on understanding market trends, this session provides essential insights and practical knowledge. Don’t miss this chance to enhance your financial and entrepreneurial skills. Register now to embark on your journey into the world of stocks and startups!",
     by: "E-Cell",
     contact: "edc@students.iitmandi.ac.in",
-    completed: false,
+    completed: true,
     gallery: "",
-    slides: "",
+    slides:
+      "https://drive.google.com/drive/folders/1XdLyw5QukdyxCdNu0eTZZWDA-tx2K3lU?usp=sharing",
   },
   {
     id: "Y9IHnTEHTVhYNDvh7Gpu",
@@ -87,9 +88,10 @@ export const eventData = [
     desc: "As part of our Technical Induction Programme (TIP), SnTC is excited to announce a session on 'Intro to Git/GitHub and Project Management' for first-year students on 23-Aug-2024. This session will provide a comprehensive overview of version control, teaching students how to create repositories and manage branches effectively. Additionally, participants will learn how to utilize Git commands within Visual Studio Code to streamline their project workflows. This foundational knowledge will equip students with essential skills for collaborative development and efficient project management, setting the stage for their future technical endeavors.",
     by: "KamandPrompt",
     contact: "pc@students.iitmandi.ac.in",
-    completed: false,
+    completed: true,
     gallery: "",
-    slides: "",
+    slides:
+      "https://www.canva.com/design/DAFdPS66-rU/fRFMobOttRw7lbfhgmHHTg/view?utm_content=DAFdPS66-rU&utm_campaign=designshare&utm_medium=link&utm_source=viewer",
   },
   {
     id: "EUizKAGgkUoCXE7mOLHY",
