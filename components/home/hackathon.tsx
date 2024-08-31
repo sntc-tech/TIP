@@ -11,10 +11,9 @@ const Hackathon = () => {
         New: TIP Hackathon
       </div>
       <div className="max-w-screen-sm">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ex
-        iste maxime praesentium quis unde voluptas. Aut minus non officiis quas
-        qui rerum, sapiente voluptatibus? Aspernatur fugiat odio officia
-        reprehenderit.
+        We&apos;re organising a fortnight-long hackathon starting right now,
+        till 15 Sep! You can choose a mentor, and submit your ideas in the form
+        given below. For more details about the mentors, check out the links.
       </div>
       <div className="flex flex-col sm:flex-row items-center gap-5">
         <Link
