@@ -104,9 +104,10 @@ export const eventData = [
     desc: "As a part of the Technical Induction Program of the SnTC Society, We are thrilled to provide a  session aimed at revolutionizing your technical proficiency and augmenting your comprehension of essential technologies like Linux, dualboot and DevOps:\nDiving into these topics, you will get to explore the foundation of many modern computing environments. Linux, known for its open-source nature, stability, and security, is a vital operating system in the tech industry. Understanding dual booting will empower you to install and use Linux alongside another OS on your computer, giving you the flexibility to leverage the strengths of both systems. Finally, DevOps practices, which integrate software development and IT operations, will equip you with the skills to automate processes, enhance collaboration, and streamline workflows, crucial for any aspiring developer or system administrator. This session will provide you with valuable knowledge and practical skills that are highly sought after in today's tech landscape.",
     by: "CG2D and KamandPrompt",
     contact: "pc@students.iitmandi.ac.in",
-    completed: false,
+    completed: true,
     gallery: "",
-    slides: "",
+    slides:
+      "https://docs.google.com/presentation/d/1RRNamkv0xUkQlfBWOsGGz8TZelCpV3gG8Vq7wGcSnMs/edit?usp=sharing",
   },
   {
     id: "a0apMDoK6py5VCOWjufx",
@@ -118,8 +119,9 @@ export const eventData = [
     desc: "As part of our Technical Induction Programme (TIP) organized by SnTC, we are thrilled to present a session on 'Cybersecurity, Blockchain, and Generative AI' for first-year students on 30-Aug-2024. This session aims to provide an understanding of the fundamentals of cybersecurity and its critical importance in the digital age. Students will also gain a basic understanding of blockchain technology and its underlying principles. Additionally, the session will introduce the concept of Generative AI, exploring how it differs from other AI technologies. This session will equip students with essential knowledge of these cutting-edge fields, fostering a deeper interest and readiness for future innovations.",
     by: "SAIC",
     contact: "saic@students.iitmandi.ac.in",
-    completed: false,
+    completed: true,
     gallery: "",
-    slides: "",
+    slides:
+      "https://www.canva.com/design/DAGONaRL3pI/O0thM_CycH2j2FcggmT8Vg/view#1",
   },
 ];
