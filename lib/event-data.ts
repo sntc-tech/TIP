@@ -63,7 +63,6 @@ export const eventData = [
     slides:
       "https://drive.google.com/drive/folders/17Am-_MudzFJxJf6PiZV7aSTpRfiWtQc1",
   },
-  
   {
     id: "Y9IHnTEHTVhYNDvh7Gpu",
     name: "Intro to Git/GitHub",
@@ -74,9 +73,10 @@ export const eventData = [
     desc: "As part of our Technical Induction Programme (TIP), SnTC is excited to announce a session on 'Intro to Git/GitHub and Project Management' for first-year students on 23-Aug-2024. This session will provide a comprehensive overview of version control, teaching students how to create repositories and manage branches effectively. Additionally, participants will learn how to utilize Git commands within Visual Studio Code to streamline their project workflows. This foundational knowledge will equip students with essential skills for collaborative development and efficient project management, setting the stage for their future technical endeavors.",
     by: "KamandPrompt",
     contact: "pc@students.iitmandi.ac.in",
-    completed: false,
+    completed: true,
     gallery: "",
-    slides: "",
+    slides:
+      "https://www.canva.com/design/DAFdPS66-rU/fRFMobOttRw7lbfhgmHHTg/view?utm_content=DAFdPS66-rU&utm_campaign=designshare&utm_medium=link&utm_source=viewer",
   },
 
 ];
